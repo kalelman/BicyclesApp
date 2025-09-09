@@ -1,58 +1,44 @@
 # BicyclesApp
-Bicycle App - Android Studio Project Setup Guide
-This guide provides all the necessary steps and code to create the Bicycle App in Android Studio. Just follow these instructions to get the project running.
 
-Step 1: Create a New Project
-Open Android Studio.
+A simple Android app to **list**, **create**, and **edit** bicycles. Built with **Kotlin** and Jetpack Compose, keeping all data **local/in-memory**.
 
-Click on New Project.
+---
 
-Select the Empty Activity (Compose) template and click Next.
+## Project Setup
 
-Configure the project:
+- **App Name:** `BicycleApp`
+- **Package:** `com.example.bicycleapp`
+- **Language:** `Kotlin`
+- **Minimum SDK:** `24+`
 
-Name: BicycleApp
+> Images are **not required**. If you want a placeholder, add it at `app/src/main/res/drawable/bicycle.png`.
 
-Package name: com.example.bicycleapp
+---
 
-Language: Kotlin
+## Requirements
 
-Minimum SDK: API 24 or higher
+- Display a list of bicycles
+- Create a new bicycle
+- Edit an existing bicycle
+- Do **not** use real images; use the provided placeholder if desired
+- Works **locally only** (no backend)
+- Keep it simple and clean
+- Ask questions as needed & propose improvements
 
-Click Finish.
+---
 
-Step 2: Update the Gradle Build File
-Replace the entire content of your app-level build.gradle.kts file (usually located at app/build.gradle.kts) with the code from the build.gradle.kts file provided below. This adds the required dependencies for Navigation and ViewModel with Compose.
+## Getting Started
 
-Step 3: Add the Placeholder Image
-In the Android Studio Project view (make sure you're on the "Android" perspective), right-click the res folder.
+1. Open the project in **Android Studio**.
+2. Sync Gradle and ensure Kotlin + Compose toolchain is installed.
+3. (Optional) Add `bicycle.png` at `app/src/main/res/drawable/`.
+4. Run on an emulator or device (API 24+).
 
-Go to New > Directory.
+---
 
-Name the directory drawable and press Enter.
+## Project Structure
 
-Download the bicycle.png image you provided and drag-and-drop it into this new res/drawable folder.
-
-Step 4: Create the Project Packages and Files
-In the Project view, navigate to app/src/main/java/com/example/bicycleapp.
-
-Right-click the com.example.bicycleapp package and create the following new packages:
-
-data
-
-navigation
-
-ui/screens (Create ui first, then screens inside it)
-
-viewmodel
-
-Now, create the Kotlin files inside the appropriate packages by right-clicking the package and selecting New > Kotlin Class/File.
-
-Copy the content from the files I've provided below into the corresponding files you've just created in Android Studio.
-
-File and Package Structure:
-
-app/build.gradle.kts (Update this file)
+app/build.gradle.kts
 
 app/src/main/res/drawable/bicycle.png (Add your image here)
 
@@ -71,8 +57,3 @@ app/src/main/java/com/example/bicycleapp/ui/theme/Color.kt (Update this file)
 app/src/main/java/com/example/bicycleapp/ui/theme/Theme.kt (Update this file)
 
 app/src/main/java/com/example/bicycleapp/viewmodel/BicycleViewModel.kt
-
-Step 5: Run the App
-Once all the files are in place, click the Run 'app' button (the green play icon) in Android Studio to build and run the application on your emulator or connected device.
-
-That's it! Your application should now be running.
